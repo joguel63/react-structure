@@ -1,3 +1,5 @@
+import { AuthLayoutComponent } from "modules/auth/layouts";
+
 export const SingInPage = (): JSX.Element => {
-  return <div>Sing In Page</div>;
+  return <AuthLayoutComponent>Sing In Page</AuthLayoutComponent>;
 };
