@@ -5,15 +5,15 @@ import styles from './Steps.module.css';
 const steps: Step[] = [
   {
     command: 'yarn dev',
-    description: 'Inicia el servidor de desarrollo con hot-reload para desarrollar tu aplicación'
+    description: 'Start the development server with hot-reload to develop your application'
   },
   {
     command: 'yarn build',
-    description: 'Construye la aplicación para producción con optimizaciones y minificación'
+    description: 'Build the application for production with optimizations and minification'
   },
   {
     command: 'yarn preview',
-    description: 'Previsualiza la build de producción localmente antes de desplegar'
+    description: 'Preview the production build locally before deployment'
   }
 ];
 

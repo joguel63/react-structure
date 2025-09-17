@@ -7,22 +7,22 @@ const quickLinks: QuickLink[] = [
   {
     title: 'Vite',
     url: DocsUrls.VITE,
-    description: 'Herramienta de construcción rápida para aplicaciones web modernas'
+    description: 'Fast build tool for modern web applications'
   },
   {
     title: 'React',
     url: DocsUrls.REACT,
-    description: 'Biblioteca de JavaScript para construir interfaces de usuario'
+    description: 'JavaScript library for building user interfaces'
   },
   {
     title: 'React Router',
     url: DocsUrls.REACT_ROUTER,
-    description: 'Navegación declarativa para aplicaciones React'
+    description: 'Declarative navigation for React applications'
   },
   {
     title: 'TypeScript',
     url: DocsUrls.TYPESCRIPT,
-    description: 'JavaScript con tipos estáticos para un desarrollo más robusto'
+    description: 'JavaScript with static types for more robust development'
   }
 ];
 

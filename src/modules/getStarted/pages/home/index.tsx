@@ -13,45 +13,45 @@ const GetStartedPage: React.FC = () => {
       <button
         className={styles.themeToggle}
         onClick={toggleTheme}
-        title={`Cambiar a tema ${theme === 'light' ? 'oscuro' : 'claro'}`}
+        title={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
       >
         {theme === 'light' ? '🌙' : '☀️'}
       </button>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>¡Bienvenido a React!</h1>
+        <h1 className={styles.title}>Welcome to React!</h1>
         <p className={styles.subtitle}>
-          Una plantilla sencilla con Vite, React, TypeScript y React Router
+          A simple template with Vite, React, TypeScript and React Router
         </p>
       </header>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Información del Entorno</h2>
+        <h2 className={styles.sectionTitle}>Environment Information</h2>
         <div className={styles.envInfo}>
           <div className={styles.envItem}>
-            <div className={styles.envLabel}>Modo</div>
+            <div className={styles.envLabel}>Mode</div>
             <div className={styles.envValue}>{environment}</div>
           </div>
           <div className={styles.envItem}>
-            <div className={styles.envLabel}>Versión</div>
+            <div className={styles.envLabel}>Version</div>
             <div className={styles.envValue}>{version}</div>
           </div>
           <div className={styles.envItem}>
-            <div className={styles.envLabel}>Tema</div>
+            <div className={styles.envLabel}>Theme</div>
             <div className={styles.envValue}>{theme}</div>
           </div>
         </div>
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Primeros Pasos</h2>
+        <h2 className={styles.sectionTitle}>Getting Started</h2>
         <Steps />
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Enlaces Útiles</h2>
+        <h2 className={styles.sectionTitle}>Useful Links</h2>
         <p style={{ color: 'var(--fg-secondary)', marginBottom: '1.5rem' }}>
-          Documentación esencial para el desarrollo con esta stack tecnológica
+          Essential documentation for development with this technology stack
         </p>
         <QuickLinks />
       </section>
