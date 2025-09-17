@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 export const GetStartedRouter: React.FC = () => {
   const modules = useMemo(
     () => ({
-      LazyHome: lazy(() => import("../pages/home")),
+      LazyGetStartedPage: lazy(() => import("../pages/home")),
     }),
     []
   );
@@ -15,7 +15,7 @@ export const GetStartedRouter: React.FC = () => {
         path="/"
         element={
           <Suspense fallback={<div>Loading…</div>}>
-            <modules.LazyHome />
+            <modules.LazyGetStartedPage />
           </Suspense>
         }
       />
