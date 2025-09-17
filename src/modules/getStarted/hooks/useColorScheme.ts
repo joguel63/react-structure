@@ -5,7 +5,7 @@ export const useColorScheme = () => {
   const [theme, setTheme] = useState<Theme>(() => {
     // Obtener tema guardado en localStorage o usar 'light' por defecto
     const savedTheme = localStorage.getItem('color-scheme');
-    return (savedTheme as Theme) || 'light';
+    return (savedTheme as Theme) || 'dark';
   });
 
   useEffect(() => {

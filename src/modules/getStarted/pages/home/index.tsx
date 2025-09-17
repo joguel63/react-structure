@@ -2,6 +2,7 @@ import React from 'react'
 import { QuickLinks, Steps } from '../../components'
 import { useColorScheme } from '../../hooks'
 import styles from './GetStartedPage.module.css'
+import reactLogo from '../../../../assets/react.svg'
 
 const GetStartedPage: React.FC = () => {
   const { theme, toggleTheme } = useColorScheme()
@@ -19,6 +20,7 @@ const GetStartedPage: React.FC = () => {
       </button>
 
       <header className={styles.header}>
+        <img src={reactLogo} className={styles.logo} alt="React logo" />
         <h1 className={styles.title}>Welcome to React!</h1>
         <p className={styles.subtitle}>
           A simple template with Vite, React, TypeScript and React Router
