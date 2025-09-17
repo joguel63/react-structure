@@ -1,10 +1,10 @@
 import { lazy, Suspense, useMemo } from "react";
 import { Route, Routes } from "react-router-dom";
 
-export const RoutesProvider = () => {
+export const GetStartedRouter: React.FC = () => {
   const modules = useMemo(
     () => ({
-      LazyGetStarted: lazy(() => import("modules/getStarted")),
+      LazyHome: lazy(() => import("../pages/home")),
     }),
     []
   );
@@ -15,7 +15,7 @@ export const RoutesProvider = () => {
         path="/"
         element={
           <Suspense fallback={<div>Loading…</div>}>
-            <modules.LazyGetStarted />
+            <modules.LazyHome />
           </Suspense>
         }
       />
