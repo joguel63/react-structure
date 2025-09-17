@@ -1,13 +1,13 @@
 // put all types exports here
-export type Theme = 'light' | 'dark';
+export type Theme = 'light' | 'dark'
 
 export interface QuickLink {
-  title: string;
-  url: string;
-  description: string;
+  title: string
+  url: string
+  description: string
 }
 
 export interface Step {
-  command: string;
-  description: string;
+  command: string
+  description: string
 }

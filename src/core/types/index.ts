@@ -1,1 +1,1 @@
-export * from "./sxStyles.type";
+export * from './sxStyles.type'

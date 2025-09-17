@@ -1,13 +1,13 @@
-import { lazy, Suspense, useMemo } from "react";
-import { Route, Routes } from "react-router-dom";
+import { lazy, Suspense, useMemo } from 'react'
+import { Route, Routes } from 'react-router-dom'
 
 export const RoutesProvider = () => {
   const modules = useMemo(
     () => ({
-      LazyGetStarted: lazy(() => import("modules/getStarted")),
+      LazyGetStarted: lazy(() => import('modules/getStarted')),
     }),
-    []
-  );
+    [],
+  )
 
   return (
     <Routes>
@@ -20,5 +20,5 @@ export const RoutesProvider = () => {
         }
       />
     </Routes>
-  );
-};
+  )
+}

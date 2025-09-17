@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      core: "/src/core",
-      modules: "/src/modules",
+      core: '/src/core',
+      modules: '/src/modules',
     },
   },
 })

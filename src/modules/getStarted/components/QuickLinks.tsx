@@ -1,36 +1,36 @@
-import React from 'react';
-import { DocsUrls } from '../enums';
-import { QuickLink } from '../types';
-import styles from './QuickLinks.module.css';
+import React from 'react'
+import { DocsUrls } from '../enums'
+import { QuickLink } from '../types'
+import styles from './QuickLinks.module.css'
 
 const quickLinks: QuickLink[] = [
   {
     title: 'Vite',
     url: DocsUrls.VITE,
-    description: 'Fast build tool for modern web applications'
+    description: 'Fast build tool for modern web applications',
   },
   {
     title: 'React',
     url: DocsUrls.REACT,
-    description: 'JavaScript library for building user interfaces'
+    description: 'JavaScript library for building user interfaces',
   },
   {
     title: 'React Router',
     url: DocsUrls.REACT_ROUTER,
-    description: 'Declarative navigation for React applications'
+    description: 'Declarative navigation for React applications',
   },
   {
     title: 'TypeScript',
     url: DocsUrls.TYPESCRIPT,
-    description: 'JavaScript with static types for more robust development'
-  }
-];
+    description: 'JavaScript with static types for more robust development',
+  },
+]
 
 export const QuickLinks: React.FC = () => {
   return (
     <div className={styles.links}>
       {quickLinks.map((link) => (
-        <a 
+        <a
           key={link.title}
           href={link.url}
           target="_blank"
@@ -42,5 +42,5 @@ export const QuickLinks: React.FC = () => {
         </a>
       ))}
     </div>
-  );
-};
+  )
+}

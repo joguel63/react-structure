@@ -1,3 +1,3 @@
-import { SxProps } from "@mui/material";
+import { SxProps } from '@mui/material'
 
-export type SxStyles<T extends string = any> = Record<T, SxProps>;
+export type SxStyles<T extends string = any> = Record<T, SxProps>
