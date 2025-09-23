@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 export const GetStartedRouter: React.FC = () => {
   const modules = useMemo(
     () => ({
-      LazyGetStartedPage: lazy(() => import('../pages/home')),
+      LazyGetStartedPage: lazy(() => import('../pages/getStarted')),
     }),
     [],
   )

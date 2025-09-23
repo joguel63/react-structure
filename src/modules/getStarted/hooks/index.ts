@@ -1,2 +1,2 @@
 // put all hooks exports here
-export * from './useColorScheme'
+export * from './useColorScheme.hook'

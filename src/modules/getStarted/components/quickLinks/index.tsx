@@ -1,6 +1,7 @@
 import React from 'react'
-import { DocsUrls } from '../enums'
-import { QuickLink } from '../types'
+
+import { DocsUrls } from 'modules/getStarted/enums'
+import { QuickLink } from 'modules/getStarted/types'
 import styles from './QuickLinks.module.css'
 
 const quickLinks: QuickLink[] = [

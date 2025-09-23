@@ -1,5 +1,6 @@
 import React from 'react'
-import { Step } from '../types'
+
+import { Step } from 'modules/getStarted/types'
 import styles from './Steps.module.css'
 
 const steps: Step[] = [
