@@ -1,8 +1,8 @@
 import React from 'react'
-
+import { Card, CardContent, Typography, Grid, Link } from '@mui/material'
 import { DocsUrls } from 'modules/getStarted/enums'
 import { QuickLink } from 'modules/getStarted/types'
-import styles from './QuickLinks.module.css'
+import { styles } from './styles'
 
 const quickLinks: QuickLink[] = [
   {
@@ -25,23 +25,54 @@ const quickLinks: QuickLink[] = [
     url: DocsUrls.TYPESCRIPT,
     description: 'JavaScript with static types for more robust development',
   },
+  {
+    title: 'Material-UI',
+    url: DocsUrls.MUI,
+    description: 'React UI framework with pre-built components and themes',
+  },
+  {
+    title: 'MUI Components',
+    url: DocsUrls.MUI_COMPONENTS,
+    description: 'Comprehensive component library for fast UI development',
+  },
+  {
+    title: 'MUI Theming',
+    url: DocsUrls.MUI_THEMING,
+    description: 'Customize colors, typography, and component styles',
+  },
 ]
 
 export const QuickLinks: React.FC = () => {
   return (
-    <div className={styles.links}>
+    <Grid container spacing={2}>
       {quickLinks.map((link) => (
-        <a
-          key={link.title}
-          href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.link}
-        >
-          <div className={styles.linkTitle}>{link.title}</div>
-          <div className={styles.linkDescription}>{link.description}</div>
-        </a>
+        <Grid size={{ xs: 12, sm: 6, md: 4 }} key={link.title}>
+          <Card
+            component={Link}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={styles.linkCard}
+          >
+            <CardContent sx={styles.cardContent}>
+              <Typography
+                variant="h6"
+                component="h3"
+                sx={styles.linkTitle}
+              >
+                {link.title}
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={styles.linkDescription}
+              >
+                {link.description}
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
       ))}
-    </div>
+    </Grid>
   )
 }

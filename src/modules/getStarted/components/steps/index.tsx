@@ -1,7 +1,7 @@
 import React from 'react'
-
+import { Box, Card, CardContent, Typography, Avatar, Chip } from '@mui/material'
 import { Step } from 'modules/getStarted/types'
-import styles from './Steps.module.css'
+import { styles } from './styles'
 
 const steps: Step[] = [
   {
@@ -20,16 +20,31 @@ const steps: Step[] = [
 
 export const Steps: React.FC = () => {
   return (
-    <ol className={styles.steps}>
+    <Box sx={styles.container}>
       {steps.map((step, index) => (
-        <li key={step.command} className={styles.step}>
-          <div className={styles.stepNumber}>{index + 1}</div>
-          <div className={styles.stepContent}>
-            <div className={styles.stepCommand}>{step.command}</div>
-            <div className={styles.stepDescription}>{step.description}</div>
-          </div>
-        </li>
+        <Card key={step.command} sx={styles.stepCard}>
+          <CardContent>
+            <Box sx={styles.stepContent}>
+              <Avatar sx={styles.stepAvatar}>
+                {index + 1}
+              </Avatar>
+              <Box sx={{ flex: 1 }}>
+                <Chip
+                  label={step.command}
+                  sx={styles.stepChip}
+                />
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={styles.stepDescription}
+                >
+                  {step.description}
+                </Typography>
+              </Box>
+            </Box>
+          </CardContent>
+        </Card>
       ))}
-    </ol>
+    </Box>
   )
 }
