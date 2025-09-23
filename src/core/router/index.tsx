@@ -1,14 +1,10 @@
-import { lazy, Suspense, useMemo } from 'react'
+import { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
+const modules = {
+  LazyGetStarted: lazy(() => import('modules/getStarted')),
+}
 export const RoutesProvider = () => {
-  const modules = useMemo(
-    () => ({
-      LazyGetStarted: lazy(() => import('modules/getStarted')),
-    }),
-    [],
-  )
-
   return (
     <Routes>
       <Route
