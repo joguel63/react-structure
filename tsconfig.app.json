@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "baseUrl": "src",
+    "paths": {
+      "contexts/*": ["contexts/*"],
+      "providers/*": ["providers/*"],
+      "types/*": ["types/*"],
+      "utils/*": ["utils/*"],
+      "components/*": ["components/*"],
+      "hooks/*": ["hooks/*"],
+      "enums/*": ["enums/*"],
+      "styles/*": ["styles/*"],
+      "assets/*": ["assets/*"],
+      "services/*": ["services/*"],
+      "vendors/*": ["vendors/*"]
+    },
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "emitDeclarationOnly": true, // Solo generar declaraciones .d.ts
+    "declaration": true, // Generar archivos .d.ts
+    "declarationMap": true, // (Opcional) Generar mapas de declaraciones .d.ts.map
+    "noEmit": false, // Permitir la generación de archivos (sin .js debido a emitDeclarationOnly)
+    "outDir": "dist/types", // Carpeta de salida
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["src"]
+}
