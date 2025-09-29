@@ -1,6 +1,6 @@
 {
   "name": "react-templates",
-   "private": false,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "description": "Put your project description here",
@@ -33,6 +33,11 @@
     "@rollup/plugin-replace": "^6.0.2",
     "globals": "16.3.0",
     "typescript-eslint": "8.39.1",
-    "vite-plugin-dts": "^4.5.4"
+    "vite-plugin-dts": "^4.5.4",
+    "license": "MIT",
+    "files": "dist",
+    "main": "./dist/yourLibName.cjs.js",
+    "module": "./dist/yourLibName.es.js",
+    "types": "./dist/types/index.d.ts"
   }
 }
